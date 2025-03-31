@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Estilo Musical</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.genre {
+    color: red;
+}
+
+.artist {
+    color: whitesmoke;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+thead {
+    background-color: lightgray;
+}
+
+.highlight {
+    background-color: lightgreen;
+}
+
+tbody tr:hover {
+    background-color: lightblue;
+}
+
+caption {
+    caption-side: top;
+    font-weight: bold;
+}
+
+
+@media (max-width: 599px) {
+    body {
+        background-color: orange;
+        font-size: 14px;
+    }
+
+    button {
+        background-color: red;
+    }
+
+    .responsive-image {
+        display: none;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 899px) {
+    body {
+        background-color: blue;
+        font-size: 16px;
+    }
+
+    button {
+        background-color: green;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .responsive-image {
+        display: block;
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 900px) {
+    body {
+        background-color: purple;
+        font-size: 18px;
+    }
+
+    button {
+        background-color: yellow;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .responsive-image {
+        display: block;
+        width: 30%;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: start;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Estilo Musical</h1>
+       
+        <button>Saiba Mais</button>
+        <img src="./1622320_423610044440518_2051767675_o.png" alt="Imagem relacionada ao estilo musical" class="responsive-image">
+
+        <section>
+            <h2>Gêneros Musicais</h2>
+            <ol>
+                <li class="genre">Rock
+                    <ul>
+                        <li class="artist">Led Zeppelin</li>
+                        <li class="artist">Queen</li>
+                    </ul>
+                </li>
+                <li class="genre">Pop
+                    <ul>
+                        <li class="artist">Michael Jackson</li>
+                        <li class="artist">Madonna</li>
+                    </ul>
+                </li>
+                <li class="genre">Jazz
+                    <ul>
+                        <li class="artist">Miles Davis</li>
+                        <li class="artist">John Coltrane</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Álbuns</h2>
+            <table>
+                <caption>Lista de Álbuns</caption>
+                <thead>
+                    <tr>
+                        <th>Nome do Artista</th>
+                        <th>Nome do Álbum</th>
+                        <th>Ano de Lançamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Led Zeppelin</td>
+                        <td>IV</td>
+                        <td>1971</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Adele</td>
+                        <td>25</td>
+                        <td>2015</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Taylor Swift</td>
+                        <td>1989</td>
+                        <td>2014</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Drake</td>
+                        <td>Scorpion</td>
+                        <td>2018</td>
+                    </tr>
+                    <tr>
+                        <td>Pink Floyd</td>
+                        <td>The Dark Side of the Moon</td>
+                        <td>1973</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
